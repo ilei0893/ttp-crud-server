@@ -10,7 +10,7 @@ router.get("/", async (req, res, next) => {
     // campuses will be the result of the Campus.findAll promise
     const campuses = await Campus.findAll({ include: Student });
     // if campuses is valid, it will be sent as a json response
-    console.log(campuses);
+    // console.log(campuses);
     res.status(200).json(campuses);
   } catch (err) {
     // if there is an error, it'll passed via the next parameter to the error handler middleware
