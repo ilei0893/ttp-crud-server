@@ -103,13 +103,13 @@ router.put("/:id", async (req, res, next) => {
     // Find a campus with a matching id from the database
     const campus = await Campus.findByPk(id);
     // database would return a valid campus object or an error
-    console.log(updatedObj);
+    // console.log(updatedObj);
     // modify the campus object with new form data
     await campus.set(updatedObj);
     // save the new campus object to the data
     // database would return a new campus object
     const updatedCampus = await campus.save();
-    console.log(updatedCampus);
+    // console.log(updatedCampus);
     // send the newCampus as a response from the API
     res.status(201).send(updatedCampus);
   } catch (err) {
