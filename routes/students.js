@@ -47,7 +47,7 @@ router.get("/:id", async (req, res, next) => {
     // Create a student object
     const studentObj = {
       firstName: firstName,
-      address: lastName,
+      lastName: lastName,
       email: email,
       imageUrl: imageUrl,
       gpa: gpa
